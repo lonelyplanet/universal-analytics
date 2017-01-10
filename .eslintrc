@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": ["airbnb"]
+}
