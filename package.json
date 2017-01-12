@@ -9,7 +9,8 @@
   "scripts": {
     "build": "babel -d dist src",
     "lint": "./node_modules/.bin/eslint app --ext .js,.jsx",
-    "test": "npm run test"
+    "test": "mocha --compilers js:babel-register test",
+    "test:ci": "mocha --compilers js:babel-register test --watch"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,16 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.8",
+    "chai": "^3.5.0",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "react": "^15.4.2"
   }
 }
